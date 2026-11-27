@@ -91,7 +91,7 @@ a {
             rgba(91, 48, 103, 0.25),
             transparent 65%
         );
-    text-align: center;
+       text-align: center;
 }
 
 .eyebrow {
@@ -679,4 +679,42 @@ body {
     transition:
         box-shadow 0.8s ease,
         filter 0.8s ease;
+}
+/* THE QUILLORA: VISIBLE MAGIC GLOW */
+
+.book-card.is-active {
+    filter: brightness(1.15);
+    z-index: 20 !important;
+}
+
+.book-card.is-active::before {
+    content: "";
+    position: absolute;
+
+    top: -45px;
+    left: -45px;
+    right: -45px;
+    bottom: -45px;
+
+    background: radial-gradient(
+        ellipse,
+        rgba(174, 111, 205, 0.35) 0%,
+        rgba(123, 72, 155, 0.20) 40%,
+        transparent 75%
+    );
+
+    filter: blur(25px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.book-card.is-active .book-cover {
+    position: relative;
+    z-index: 1;
+
+    box-shadow:
+        0 0 15px rgba(189, 145, 200, 0.55),
+        0 0 40px rgba(155, 95, 190, 0.40),
+        0 0 75px rgba(130, 75, 170, 0.25),
+        8px 15px 35px rgba(0, 0, 0, 0.55);
 }

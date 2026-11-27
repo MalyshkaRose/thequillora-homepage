@@ -144,6 +144,30 @@ carousel.addEventListener("mouseleave", () => {
 
 });
 
+/* MANUAL NAVIGATION */
+
+const previousButton = document.getElementById("prev-book");
+const nextButton = document.getElementById("next-book");
+
+previousButton.addEventListener("click", () => {
+
+    activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+
+    updateCarousel();
+
+    restartRotation();
+
+});
+
+nextButton.addEventListener("click", () => {
+
+    activeIndex = (activeIndex + 1) % cards.length;
+
+    updateCarousel();
+
+    restartRotation();
+
+});
 
 /* INITIALISE */
 

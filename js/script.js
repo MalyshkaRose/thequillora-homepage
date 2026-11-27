@@ -61,6 +61,8 @@ function updateCarousel() {
         card.style.opacity = opacity;
 
         card.style.zIndex = 10 - Math.abs(position);
+       
+       card.classList.toggle("is-active", position === 0);
 
     });
 

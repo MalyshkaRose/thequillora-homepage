@@ -438,3 +438,30 @@ body {
     display: block;
     background: #100d14;
 }
+/* CAROUSEL NAVIGATION BUTTONS */
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 25px;
+}
+
+.carousel-controls button {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #bd91c8;
+    border-radius: 50%;
+    background: #1b1422;
+    color: #bd91c8;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background: #714078;
+    color: white;
+    transform: scale(1.1);
+}

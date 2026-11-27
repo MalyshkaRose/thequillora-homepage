@@ -727,3 +727,35 @@ body {
         0 0 75px rgba(130, 75, 170, 0.25),
         8px 15px 35px rgba(0, 0, 0, 0.55);
 }
+/* =================================
+   HD BOOK COVER DISPLAY
+================================= */
+
+.book-cover:has(img) {
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+}
+
+.book-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    image-rendering: auto;
+    filter: none;
+}
+
+/* Keep the original artwork bright and clear */
+
+.book-card.is-active .book-cover img {
+    opacity: 1;
+    filter: none;
+}
+
+/* Prevent brightness effects from affecting artwork */
+
+.book-card.is-active {
+    filter: none;
+}

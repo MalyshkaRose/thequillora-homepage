@@ -342,3 +342,29 @@ footer p:last-child {
         font-size: 32px;
     }
 }
+/* QUILLORA DARK THEME OVERRIDE */
+
+html,
+body {
+    background: #100d14 !important;
+    color: #f4edf5 !important;
+}
+
+.hero {
+    background: #100d14 !important;
+    color: #f4edf5 !important;
+}
+
+.navbar {
+    background: #100d14 !important;
+}
+
+.hero h1,
+.book-information h2 {
+    color: #f4edf5 !important;
+}
+
+.hero-description,
+.book-information p {
+    color: #b8aabb !important;
+}

@@ -1,4 +1,3 @@
-```javascript
 /* =====================================
    THE QUILLORA
    3D BOOK CAROUSEL

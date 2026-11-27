@@ -616,3 +616,32 @@ body {
     object-position: center;
     display: block;
 }
+/* FINAL HARDCOVER FRONT FIX */
+
+.book-cover {
+    position: relative !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+}
+
+.book-cover img {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    object-fit: cover !important;
+    object-position: center !important;
+
+    display: block !important;
+    z-index: 2;
+}
+
+/* Keep the spine visible */
+.book-cover::before {
+    z-index: 3;
+}

@@ -438,30 +438,42 @@ body {
     display: block;
     background: #100d14;
 }
-/* CAROUSEL NAVIGATION BUTTONS */
+/* QUILLORA CAROUSEL CONTROLS */
 
 .carousel-controls {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
-    gap: 35px;
-    margin-top: 25px;
+    gap: 25px;
+    margin: 30px auto;
 }
 
 .carousel-controls button {
-    width: 45px;
-    height: 45px;
-    border: 1px solid #bd91c8;
-    border-radius: 50%;
-    background: #1b1422;
-    color: #bd91c8;
-    font-size: 20px;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    width: 48px !important;
+    height: 48px !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #bd91c8 !important;
+    border-radius: 50% !important;
+
+    background: #1b1422 !important;
+    color: #bd91c8 !important;
+
+    font-family: Georgia, serif;
+    font-size: 22px !important;
+
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .carousel-controls button:hover {
-    background: #714078;
-    color: white;
-    transform: scale(1.1);
+    background: #714078 !important;
+    color: #ffffff !important;
+    transform: scale(1.12);
 }

@@ -603,3 +603,16 @@ body {
         0 0 18px rgba(189, 145, 200, 0.25),
         8px 15px 35px rgba(0, 0, 0, 0.55);
 }
+/* REFINE HARDCOVER FRONT */
+
+.book-cover {
+    padding: 0 !important;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}

@@ -47,7 +47,7 @@ function updateCarousel() {
 
         const x = position * 230;
         const z = position === 0 ? 100 : -100;
-        const rotate = position * -18;
+        const rotate = position * -12;
         const scale = position === 0 ? 1.15 : 0.78;
         const opacity = position === 0 ? 1 : 0.65;
 
@@ -110,7 +110,7 @@ function startRotation() {
 
         updateCarousel();
 
-    }, 4500);
+    }, 8000);
 
 }
 

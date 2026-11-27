@@ -683,8 +683,17 @@ body {
 /* THE QUILLORA: VISIBLE MAGIC GLOW */
 
 .book-card.is-active {
-    filter: brightness(1.15);
     z-index: 20 !important;
+    filter: none;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    image-rendering: auto;
+    filter: none;
 }
 
 .book-card.is-active::before {

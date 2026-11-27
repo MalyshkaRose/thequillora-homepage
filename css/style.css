@@ -477,3 +477,129 @@ body {
     color: #ffffff !important;
     transform: scale(1.12);
 }
+/* =====================================
+   THE QUILLORA: ENCHANTED HARDCOVERS
+===================================== */
+
+/* Book structure */
+
+.book-card {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+}
+
+.book-cover {
+    position: relative;
+    overflow: visible !important;
+    transform-style: preserve-3d;
+    border: 1px solid rgba(220, 190, 230, 0.35);
+
+    box-shadow:
+        5px 8px 15px rgba(0, 0, 0, 0.45),
+        12px 18px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Hardcover spine */
+
+.book-cover::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 9px;
+    height: 100%;
+
+    background: linear-gradient(
+        to right,
+        rgba(10, 5, 15, 0.8),
+        rgba(190, 145, 200, 0.35),
+        rgba(255, 255, 255, 0.12)
+    );
+
+    border-right: 1px solid rgba(255,255,255,0.2);
+
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* Page edges */
+
+.book-cover::after {
+    content: "";
+    position: absolute;
+
+    top: 2px;
+    right: -5px;
+
+    width: 5px;
+    height: calc(100% - 4px);
+
+    background: repeating-linear-gradient(
+        to bottom,
+        #e8dce9 0px,
+        #b9a9bc 1px,
+        #f3eaf3 2px
+    );
+
+    transform: skewY(0deg);
+    opacity: 0.75;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Preserve original cover artwork */
+
+.book-cover img {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+/* Magical lighting */
+
+.carousel {
+    position: relative;
+}
+
+.carousel::before {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(
+        circle,
+        rgba(150, 90, 175, 0.16),
+        rgba(100, 55, 120, 0.06) 50%,
+        transparent 75%
+    );
+
+    filter: blur(25px);
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Gentle book interaction */
+
+.book-card:hover .book-cover {
+    filter: brightness(1.12);
+
+    box-shadow:
+        0 0 18px rgba(189, 145, 200, 0.25),
+        8px 15px 35px rgba(0, 0, 0, 0.55);
+}

@@ -150,3 +150,24 @@ carousel.addEventListener("mouseleave", () => {
 updateCarousel();
 
 startRotation();
+/* MANUAL CAROUSEL NAVIGATION */
+
+document.getElementById("prev-book").addEventListener("click", () => {
+
+    activeIndex = (activeIndex - 1 + cards.length) % cards.length;
+
+    updateCarousel();
+
+    restartRotation();
+
+});
+
+document.getElementById("next-book").addEventListener("click", () => {
+
+    activeIndex = (activeIndex + 1) % cards.length;
+
+    updateCarousel();
+
+    restartRotation();
+
+});

@@ -148,4 +148,3 @@ carousel.addEventListener("mouseleave", () => {
 updateCarousel();
 
 startRotation();
-```
